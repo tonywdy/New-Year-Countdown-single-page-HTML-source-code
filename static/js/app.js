@@ -18,7 +18,7 @@ $(document).ready(function(){
     $(".date").before(times);
 
     //倒计时
-    var starttime = new Date("2022/07/20");
+    var starttime = new Date("2023/07/20");
     setInterval(function () {
         var nowtime = new Date();
         var time = starttime - nowtime;
