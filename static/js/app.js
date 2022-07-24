@@ -17,8 +17,8 @@ $(document).ready(function(){
     var times = "<div class='times'></div>";
     $(".date").before(times);
 
-    //春节倒计时
-    var starttime = new Date("2020/12/27");
+    //倒计时
+    var starttime = new Date("2022/07/20");
     setInterval(function () {
         var nowtime = new Date();
         var time = starttime - nowtime;
@@ -28,7 +28,7 @@ $(document).ready(function(){
         var seconds = parseInt(time / 1000 % 60);
         
         var syday = "<span>" + hour + "</span>" + "小时" + "<span>" + minute + "</span>" + "分钟" + "<span class='Lose'>" + seconds + "</span>" + "秒";
-        $('.time').html("<p>放假倒计时</p>" + "<p><span>" + day + "</span>" + "天</p>");
+        $('.time').html("<p>api维持倒计时</p>" + "<p><span>" + day + "</span>" + "天</p>");
         $(".sydate").html(syday);
         
     }, 1000);
@@ -125,7 +125,7 @@ $(document).ready(function(){
     });
 
 
-    var mess = "<span>哈喽啊, 少年！！</span><span class='B-span2'>祝你，新年快乐！</span><span>Hello, 小高教学网源码分享：www.12580sky.com, happy new year</span>";
+    var mess = "<span>哈喽啊, 少年！！</span><span class='B-span2'>一年的期限，我能撑过去么！</span><span>感谢大家的支持！</span>";
     $(".Barrage").append(mess);
 
     $(".buts").click(function(){
@@ -208,8 +208,8 @@ $(document).ready(function(){
         wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
             
             wx.updateAppMessageShareData({ 
-                title: 'Hello, 2020 happy new year', // 分享标题
-                desc: '你好, 2020, 新年快乐！ 除夕倒计时, 一大波弹幕正在来袭！！', // 分享描述
+                title: 'I hope my API can survive', // 分享标题
+                desc: '希望我的api能存活下来', // 分享描述
                 link: 'https://www.shuhaisc.com/Clock/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                 imgUrl: 'https://www.shuhaisc.com/Clock/images/time.jpg', // 分享图标
                 success: function () {
@@ -218,9 +218,9 @@ $(document).ready(function(){
             });
 
             wx.updateTimelineShareData({ 
-                title: 'Hello, 2020 happy new year', // 分享标题
-                link: 'https://www.shuhaisc.com/Clock/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-                imgUrl: 'https://www.shuhaisc.com/Clock/images/time.jpg', // 分享图标
+                title: 'I hope my API can survive', // 分享标题
+                link: 'https://new-year-countdown-single-page-html-source-code.vercel.app/', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: 'https://gitlab.com/KINGWDY/photobed/-/raw/main/20220724115535.png', // 分享图标
                 success: function () {
                     // alert("分享成功!");
                 }
